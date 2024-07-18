@@ -9,7 +9,8 @@
     "type-check": "turbo type-check",
     "clean": "turbo clean",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "prepare": "husky"
+    "prepare": "husky",
+    "ui:add": "pnpm --filter ui ui:add"
   },
   "devDependencies": {
     "husky": "^9.1.1",
