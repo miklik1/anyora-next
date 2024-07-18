@@ -6,7 +6,8 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "echo \"Success: no test specified\" && exit 0"
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
