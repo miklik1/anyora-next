@@ -12,15 +12,12 @@
     ".": "./src/components/index.ts",
     "./globals.css": "./globals.css",
     "./postcss.config": "./postcss.config.js",
-    "./tailwind.config": "./tailwind.config.js",
+    "./tailwind.config": "./tailwind.config.ts",
     "./lib/*": "./src/lib/*.ts"
   },
   "scripts": {
-    "build": "tailwindcss -i ./globals.css -o ./dist/index.css",
     "lint": "eslint . --max-warnings 0",
-    "generate:component": "turbo gen react-component",
-    "dev": "tailwindcss -i ./globals.css -o ./dist/index.css --watch",
-    "type-check": "tsc --noEmit"
+    "generate:component": "turbo gen react-component"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

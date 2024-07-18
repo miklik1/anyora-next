@@ -10,5 +10,6 @@ const config: Omit<Config, "content"> = {
     },
   },
   plugins: [],
+  presets: ["@repo/ui/tailwind.config"],
 };
 export default config;
