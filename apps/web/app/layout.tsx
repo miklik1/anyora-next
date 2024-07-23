@@ -3,6 +3,8 @@ import localFont from 'next/font/local'
 import { ThemeProvider, Navbar } from 'components'
 import '@repo/ui/globals.css'
 import './globals.css'
+import { Hero } from 'components/hero'
+import { Services } from 'components/services'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -32,7 +34,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
+          <div className="flex justify-center">
+            <Navbar />
+          </div>
+          <Hero />
+          <Services />
           {children}
         </ThemeProvider>
       </body>
