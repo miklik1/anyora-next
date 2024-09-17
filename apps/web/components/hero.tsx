@@ -1,3 +1,13 @@
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@ui/components/ui/sheet"
+
+
 export function Hero() {
   return (
     <div className="container flex items-center justify-between p-24">
@@ -11,6 +21,18 @@ export function Hero() {
         <p className="text-lg">
           Get started by editing <code>pages/index.js</code>
         </p>
+        <Sheet>
+          <SheetTrigger>Open</SheetTrigger>
+          <SheetContent>
+            <SheetHeader>
+              <SheetTitle>Are you absolutely sure?</SheetTitle>
+              <SheetDescription>
+                This action cannot be undone. This will permanently delete your account
+                and remove your data from our servers.
+              </SheetDescription>
+            </SheetHeader>
+          </SheetContent>
+        </Sheet>
       </div>
       <div>TO BE IMAGE</div>
     </div>

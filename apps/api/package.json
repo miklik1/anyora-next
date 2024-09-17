@@ -20,6 +20,8 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@repo/db": "workspace:*",
+    "@repo/validations": "workspace:*",
     "@apollo/server": "^4.10.5",
     "@nestjs/apollo": "^12.2.0",
     "@nestjs/common": "^10.0.0",

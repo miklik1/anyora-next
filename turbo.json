@@ -1,5 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [".env"],
   "tasks": {
     "build": {
       "dependsOn": ["^build", "^db:generate"],
@@ -12,15 +13,22 @@
     "db:push": {
       "cache": false
     },
+    "dev": {
+      "dependsOn": ["^docker:up", "^db:generate"],
+      "persistent": true
+    },
+    "docker:up": {
+      "cache": false,
+      "persistent": false
+    },
+    "docker:down": {
+      "cache": false,
+      "persistent": false
+    },
     "lint": {
       "dependsOn": ["^lint"]
     },
     "type-check": {},
-    "dev": {
-      "dependsOn": ["^db:generate"],
-      "cache": false,
-      "persistent": true
-    },
     "clean": {
       "cache": false
     },
