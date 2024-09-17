@@ -3,9 +3,10 @@ import { NavbarItem } from './navbar-item.model';
 
 // TODO
 
-import { prisma } from '@repo/db';
+import { PrismaClient } from '@repo/db';
 import { NavbarItemSchema } from '@repo/validations';
 
+const prisma = new PrismaClient();
 
 @Injectable()
 export class NavbarService {
