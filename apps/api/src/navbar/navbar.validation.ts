@@ -6,3 +6,5 @@ export const NavbarItemSchema = z.object({
   position: z.number().int().nonnegative('Position must be a non-negative integer'),
   isVisible: z.boolean().optional(),
 });
+
+export const NavbarItemUpdateSchema = NavbarItemSchema.partial();  // Use partial validation for updates

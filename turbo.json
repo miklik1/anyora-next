@@ -8,13 +8,15 @@
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
     },
     "db:generate": {
-      "cache": false
+      "cache": false,
+      "persistent": false
     },
     "db:push": {
-      "cache": false
+      "cache": false,
+      "persistent": false
     },
     "dev": {
-      "dependsOn": ["^docker:up", "^db:generate"],
+      "dependsOn": ["^docker:up", "^db:generate", "^db:push"],
       "persistent": true
     },
     "docker:up": {

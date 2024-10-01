@@ -3,17 +3,17 @@ import { ObjectType, Field, Int } from '@nestjs/graphql';
 @ObjectType()
 export class NavbarItem {
   @Field(() => Int)
-  id: number;
+  id!: number;  // Definite assignment assertion
 
   @Field()
-  label: string;
+  label!: string;
 
   @Field()
-  link: string;
+  link!: string;
 
   @Field(() => Int)
-  position: number;
+  position!: number;
 
   @Field()
-  isVisible: boolean;
+  isVisible!: boolean;
 }

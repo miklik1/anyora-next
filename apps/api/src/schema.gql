@@ -1,0 +1,22 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Mutation {
+  createNavbarItem(isVisible: Boolean, label: String!, link: String!, position: Int!): NavbarItem!
+  deleteNavbarItem(id: Int!): NavbarItem!
+  updateNavbarItem(id: Int!, isVisible: Boolean, label: String, link: String, position: Int): NavbarItem!
+}
+
+type NavbarItem {
+  id: Int!
+  isVisible: Boolean!
+  label: String!
+  link: String!
+  position: Int!
+}
+
+type Query {
+  getNavbarItem(id: Int!): NavbarItem!
+  getNavbarItems: [NavbarItem!]!
+}
